@@ -1,10 +1,10 @@
 import { PaymentMethod } from "./payment-method"
 export class EWallet extends PaymentMethod {
-    private cardNumber: string
+    private walletid: string
     static FEE_EWALLET : number = 1
-    constructor(account: string , cardNumber: string){
+    constructor(account: string , walletid: string){
         super(account)
-        this.cardNumber = cardNumber
+        this.walletid = walletid
     }
     processPayment(amount: number): boolean {
         console.log(`Cutting e-wallet balance: {${amount}} Baht`)
