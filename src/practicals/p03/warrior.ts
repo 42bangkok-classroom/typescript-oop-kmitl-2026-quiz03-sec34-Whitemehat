@@ -10,6 +10,12 @@ export class Warrior extends Character {
   getWeapon(){
     return this.weapon
   }
+  getHealth(){
+        if(!this.name && !this.weapon && !this.health){
+          return 0
+        }
+        return this.health
+    }
   receiveDamage(damage: number){
     this.health -= (damage * ( 100 - Warrior.REDUCE_PERCENT) / 100)
   }

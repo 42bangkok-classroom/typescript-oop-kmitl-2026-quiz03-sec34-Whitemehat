@@ -8,4 +8,20 @@ export class OnlineCourse {
         this.courseName = course
         this.maxStudents = max
     }
+
+    enroll(): boolean{
+
+    }
+    closeCourse():void{
+
+    }
+    getAvailableSeats(): number{
+
+    }
+    getCourseStatus(): string{
+
+    }
+    private canEnroll(): boolean{
+        
+    }
 }
