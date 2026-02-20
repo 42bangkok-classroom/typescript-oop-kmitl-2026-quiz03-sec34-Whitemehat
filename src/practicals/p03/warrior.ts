@@ -11,7 +11,7 @@ export class Warrior extends Character {
     return this.weapon
   }
   getHealth(){
-        if(!this.name && !this.weapon && !this.health){
+        if(!this.name && !this.weapon){
           return 0
         }
         return this.health

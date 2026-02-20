@@ -10,18 +10,25 @@ export class OnlineCourse {
     }
 
     enroll(): boolean{
-
+        if(this.maxStudents > 0){
+            this.maxStudents--
+            return true
+        }
+        return false
     }
     closeCourse():void{
 
     }
     getAvailableSeats(): number{
-
+        return this.maxStudents
     }
     getCourseStatus(): string{
-
+        return this.isOpen ? "Open" : "Closed"
     }
     private canEnroll(): boolean{
-        
+        if(this.maxStudents > 0){
+            return true
+        }
+        return false
     }
 }
