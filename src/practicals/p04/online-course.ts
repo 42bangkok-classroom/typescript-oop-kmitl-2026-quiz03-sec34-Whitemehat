@@ -26,7 +26,7 @@ export class OnlineCourse {
         return this.isOpen ? "Open" : "Closed"
     }
     private canEnroll(): boolean{
-        if(this.maxStudents > 0){
+        if(this.maxStudents > 0 || !this.isOpen){
             return true
         }
         return false
