@@ -10,10 +10,6 @@ export class OnlineCourse {
     }
 
     enroll(): boolean{
-        if(this.maxStudents > 0){
-            this.maxStudents--
-            return true
-        }
         return this.canEnroll()
     }
     closeCourse():void{
@@ -26,7 +22,7 @@ export class OnlineCourse {
         return this.isOpen ? "Open" : "Closed"
     }
     private canEnroll(): boolean{
-        if(this.maxStudents > 0 || this.isOpen){
+        if(this.maxStudents > 0 && this.isOpen){
             return true
         }
         return false
