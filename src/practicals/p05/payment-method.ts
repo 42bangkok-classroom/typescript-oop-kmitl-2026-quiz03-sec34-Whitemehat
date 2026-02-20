@@ -5,5 +5,9 @@ export abstract class PaymentMethod implements Payable {
     constructor(account: string){
         this.accountName = account
     }
-    getAccountName():string
+    getAccountName():string{
+        return this.accountName
+    }
+    abstract processPayment(amount: number): boolean
+    abstract getPaymentFee(amount: number): number 
 }
