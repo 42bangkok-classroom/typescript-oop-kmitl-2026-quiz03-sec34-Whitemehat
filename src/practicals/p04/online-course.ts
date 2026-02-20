@@ -17,7 +17,7 @@ export class OnlineCourse {
         return false
     }
     closeCourse():void{
-
+        this.isOpen = false
     }
     getAvailableSeats(): number{
         return this.maxStudents
