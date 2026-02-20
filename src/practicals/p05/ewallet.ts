@@ -7,7 +7,7 @@ export class EWallet extends PaymentMethod {
         this.walletid = walletid
     }
     processPayment(amount: number): boolean {
-        console.log(`Cutting e-wallet balance: {${amount}} Baht`)
+        console.log(`Cutting e-wallet balance: ${amount} Baht`)
         return true;
     }
     getPaymentFee(amount: number): number {

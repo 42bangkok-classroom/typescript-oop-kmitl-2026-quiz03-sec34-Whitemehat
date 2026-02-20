@@ -7,7 +7,7 @@ export class CreditCard extends PaymentMethod {
         this.cardNumber = cardNumber
     }
     processPayment(amount: number): boolean {
-        console.log(`Cutting credit card balance:{${amount}} Baht`)
+        console.log(`Cutting credit card balance: ${amount} Baht`)
         return true;
     }
     getPaymentFee(amount: number): number {
