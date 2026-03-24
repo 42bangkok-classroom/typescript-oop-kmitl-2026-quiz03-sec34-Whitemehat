@@ -12,6 +12,13 @@ export class Warrior extends Character {
     return this.weapon;
   }
 
+  getHealth(): number {
+    if(!this.name || !this.weapon){
+      return 0;
+    }
+    return this.health;
+  }
+
   receiveDamage(damage: number): void {
     this.health -= (damage * (100 - Warrior.REDUCE) / 100);
   }
