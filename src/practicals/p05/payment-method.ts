@@ -1,13 +1,12 @@
-import { Payable } from "./payable"
-export abstract class PaymentMethod implements Payable {
-    protected accountName: string
-
-    constructor(account: string){
-        this.accountName = account
+import { Payable } from "./payable";
+export abstract class PaymentMethod implements Payable{
+    protected accountName: string;
+    constructor(name: string){
+        this.accountName = name;
     }
-    getAccountName():string{
-        return this.accountName
+    getAccountName(){
+        return this.accountName;
     }
     abstract processPayment(amount: number): boolean
-    abstract getPaymentFee(amount: number): number 
+    abstract getPaymentFee(amount: number): number
 }
