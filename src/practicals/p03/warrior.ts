@@ -1,22 +1,18 @@
 import { Character } from "./character";
 
 export class Warrior extends Character {
-  public weapon: string
-  static REDUCE_PERCENT: number = 10
-  constructor(name: string , weapon : string , health: number ){
-    super(name , health)
-    this.weapon = weapon
+  public weapon:string;
+  static REDUCE = 10;
+  constructor(name: string , weapon:string , health: number){
+    super(name , health);
+    this.weapon = weapon;
   }
+
   getWeapon(){
-    return this.weapon
+    return this.weapon;
   }
-  getHealth(){
-        if(!this.name && !this.weapon){
-          return 0
-        }
-        return this.health
-    }
-  receiveDamage(damage: number){
-    this.health -= (damage * ( 100 - Warrior.REDUCE_PERCENT) / 100)
+
+  receiveDamage(damage: number): void {
+    this.health -= (damage * (100 - Warrior.REDUCE) / 100);
   }
 }
