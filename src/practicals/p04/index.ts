@@ -1,4 +1,4 @@
-import { OnlineCourse } from "./online-course";
+import { OnlineCourse } from "./online-course.ts";
 
 const course = new OnlineCourse("TypeScript OOP", 3);
 
