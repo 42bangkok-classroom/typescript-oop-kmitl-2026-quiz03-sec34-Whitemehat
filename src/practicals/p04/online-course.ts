@@ -13,7 +13,7 @@ export class OnlineCourse {
     }
 
     closeCourse():void{
-
+        this.isOpen = false;
     }
     getAvailableSeats(): number{
         return this.maxStudents
